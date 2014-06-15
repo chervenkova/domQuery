@@ -26,18 +26,18 @@ function elements(selector) {
 
 var by = {
 	tag: function(tagName) {
-		return function(item) {
-				return item.querySelectorAll(tagName);
-			}
+		return function(element) {
+			return element.querySelectorAll(tagName);
+		}
 	},
 	css: function(cssQuery) {
-		return function(item) {
-				return item.querySelectorAll(cssQuery);
+		return function(element) {
+				return element.querySelectorAll(cssQuery);
 			}
 	},
 	attr: function(attrName, attrValue) {
-		return function(item) {
-				return item.querySelectorAll('[' + attrName + '="' + attrValue + '"]');
+		return function(element) {
+				return element.querySelectorAll('[' + attrName + '="' + attrValue + '"]');
 			}
 	}
 }
