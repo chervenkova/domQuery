@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script src="lib.js" type='text/javascript'></script>  
+	</head>
+	<body>
+		<header>
+			<div class="user-block">
+			<div ng-model="email">a@x.com</div>
+			</div>
+			
+			<script type='text/javascript'>
+				var t = elements(by.tag('header')).elements(by.css('.user-block')).elements(by.attr('ng-model', 'email')).first().text();
+				if (t == 'a@x.com') 
+				{
+					alert('Задание выполнено :-)');
+				}
+				else
+				{	
+					alert('Задание не выполнено :-(');
+				}
+			</script>
+		</header>
+	</body>
+</html>
+
