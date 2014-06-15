@@ -9,14 +9,11 @@
 			</div>
 			
 			<script type='text/javascript'>
-				var t = elements(by.tag('header')).elements(by.css('.user-block')).elements(by.attr('ng-model', 'email')).first().text();
-				if (t == 'a@x.com') 
-				{
-					alert('Задание выполнено :-)');
+				if (elements(by.tag('header')).elements(by.css('.user-block')).elements(by.attr('ng-model', 'email')).first().text() == 'a@x.com') {
+					alert('Mission complete');
 				}
-				else
-				{	
-					alert('Задание не выполнено :-(');
+				else {
+					alert('Mission failed');
 				}
 			</script>
 		</header>
